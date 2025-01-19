@@ -1,20 +1,23 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='topsis_harshtyagi_102203964',
+    name='Topsis-Harsh-102203964',
     version='1.0.0',
+    packages=find_packages(),
+    install_requires=['numpy', 'pandas'],
+    entry_points={
+        'console_scripts': [
+            'topsis=topsis.topsis:main',
+        ],
+    },
     author='Harsh Tyagi',
-    author_email='htyagi_be22@thapar.edu', 
-    description='A Python implementation of the TOPSIS method for multi-criteria decision making.',
+    author_email='htyagi_be22@thapar.edu',
+    description='A Python package for implementing TOPSIS',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/harshtyagi102203964/topsis',
-    packages=find_packages(),
-    install_requires=[],
+    url='https://github.com/Harsh-tyagi94/Topsis',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
     ],
-    python_requires='>=3.6',
 )
